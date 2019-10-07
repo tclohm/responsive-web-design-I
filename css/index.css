@@ -1,3 +1,500 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: clear;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/*div {
+	border: 2px solid pink;
+}*/
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.nav-container {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	width: 100%;
+	background: white;
+	/*background: rgb(218,16,179);
+	background: linear-gradient(270deg, rgba(218,16,179,1) 0%, rgba(242,249,71,1) 48%, rgba(0,255,230,1) 94%);*/
+	z-index: 1;
+}
+
+.links-container {
+	display: flex;
+	width: 60%;
+	justify-content: space-around;
+}
+
+.nav-item {
+	/*display: flex;*/
+	margin: 2.7%;
+	text-decoration: none;
+	color: lightslategrey;
+	background-color: clear;
+}
+
+.nav-item:hover {
+	color: black;
+}
+
+.nav-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: clear;
+	/*padding-left: 12%;*/
+}
+
+/* banner after navigation */
+
+.banner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 70vh;
+	
+	border-bottom: 2px solid black;
+}
+
+.innovation-card-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+	height: 60vh;
+
+	text-align: center;
+	font-size: 80px;
+}
+
+.innovation-card-left .get-started-btn {
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	padding: 2% 5%;
+	text-decoration: none;
+	color: black;
+	font-size: 17px;
+}
 
 
+.get-started-btn:hover {
+	background-color: black;
+	color: white;
+}
+
+
+.img-card-right {
+	background-image: url("../img/header-img.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 55vh;
+	width: 55vw;
+	background-color: clear;
+	right: 0%;
+
+}
+
+
+.two-columns, .three-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 20vh;
+}
+
+#features, #about {
+	width: 45%;
+	top: 25%;
+}
+
+.one-column {
+	display: flex;
+	justify-content: center;
+}
+
+.image-python-code {
+	background-image: url("../img/mid-page-accent.jpg");
+	height: 21.5vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.three-columns {
+	/*height: 250px;*/
+	height: 26vh;
+	border-bottom: 2px solid black;
+}
+
+
+#services, #product, #vision {
+	width: 33%;
+	height: 70%;
+}
+
+#vision {
+	right: 0%;
+}
+
+.contact-container {
+	width: 100%;
+}
+
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 25vh;
+	margin: 40px 0 0 0;
+}
+
+
+/* services.html */
+
+.service-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid black;
+}
+
+.image-service img {
+	justify-content: center;
+}
+
+.service-container #service {
+	margin-top: 30px;
+}
+
+.service-container #service h2{
+	font-size: 30px;
+}
+
+.material-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 40px 0 10px 0;
+}
+
+.material-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 15px;
+	width: 48%;
+	height: 230px;
+	border: 2px solid black;
+	background-color: whitesmoke;
+}
+
+.material-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.learn-more-btn {
+	height: 10%;
+	width: 40%;
+	border: 1px solid black;
+
+	text-align: center;
+	text-decoration: none;
+	color: black;
+
+	background-color: white;
+
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-top: 20px;
+}
+
+.learn-more-btn:hover {
+	background-color: black;
+	color: white;
+}
+
+.footer-container {
+	flex-direction: row;
+	padding: 50px 0;
+	border-top: 2px solid black;
+}
+
+.footer-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-item ul {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+}
+
+.footer-item img {
+	width: 440px;
+}
+
+li {
+	list-style-type: square;
+	margin-top: 15px;
+}
+
+footer {
+	height: 100px;
+}
+
+footer p {
+	text-align: center;
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* TABLET 800px pixels */
+@media (max-width: 800px) {
+
+	.nav-container {
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		align-items: center;
+		height: 13vh;
+	}
+
+	.links-container {
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.nav-item {
+		margin: 0;
+		padding: 2vh 0 2vh 0;
+	}
+
+	.nav-logo {
+		margin-top: 2%;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.banner {
+		justify-content: center;
+		height: 50%;
+		margin-top: 23%;
+		padding-bottom: 7vh;
+	}
+
+	.img-card-right {
+		display: none;
+	}
+
+	.two-columns {
+		justify-content: space-around;
+		height: 25vh;
+	}
+
+	.three-columns {
+		justify-content: space-around;
+		height: 36vh;
+	}
+
+	.one-column .image-python-code {
+		background-size: 100% 100%;
+	}
+
+	#services, #product, #vision {
+		height: 25vh;
+		width: 32%;
+
+	}
+
+	.contact-container {
+		display: flex;
+		flex-direction: row;
+		margin-left: 2.5vw;
+		width: 50%;
+	}
+
+}
+
+/* MOBILE 500 pixels */
+@media (max-width: 500px) {
+	.nav-container {
+		position: static;
+		height: 62vh;
+		width: 100%;
+		padding-top: 1vh;
+	}
+
+	.links-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%
+	}
+
+	.nav-item {
+		width: 100%;
+		padding: 3vh 0;
+		border-bottom: 1px solid black;
+		font-size: 1.2rem;
+	}
+
+	.nav-item:nth-child(1) {
+		border-top: 1px solid black;
+	}
+
+	.container {
+		width: 98%;
+	}
+
+	.banner {
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		margin-top: 6vh;
+	}
+
+	.banner .innovation-card-left {
+		justify-content: space-between;
+		width: 100%;
+		height: 50vh;
+		margin: 2vh 0 2vh 0;
+	}
+
+	.banner .innovation-card-left .get-started-btn {
+		height: 5vh;
+		width: 40%;
+		text-align: center;
+	}
+
+	.two-columns, .three-columns {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	.two-columns {
+		justify-content: space-around;
+		height: 40vh;
+		margin-top: 6vh;
+	}
+
+	.one-column {
+		height: 18vh;
+	}
+
+	.one-column .image-python-code {
+		background-size: 100% 60%;
+	}
+
+	.three-columns {
+		justify-content: space-around;
+		height: 60vh;
+		margin-top: 2vh;
+	}
+
+	#features, #about, #services, #product, #vision {
+		width: 95%;
+		height: 15vh;
+	}
+
+	.contact-container {
+		flex-direction: column;
+		margin-left: 0;
+		width: 100%;
+	}
+
+}
